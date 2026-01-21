@@ -28,7 +28,7 @@ def stationByName(gare):
 
     #If there is only one station, we return its ID
     if len(stations) == 1:
-        gare_choisie = data["places"][0]
+        gare_choisie = stations[0]
         print(f"Gare trouvée : {gare_choisie['name']} (ID: {gare_choisie['id']})")
         return gare_choisie["id"]
     
