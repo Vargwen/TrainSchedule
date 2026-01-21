@@ -10,7 +10,7 @@ TOKEN = os.getenv("TOKEN")
 
 #Get the next train from the station ID
 def nextTrainFromStationID(station_id, time):
-    url = f"https://api.sncf.com/v1/coverage/sncf/stop_areas/stop_area:SNCF:87682443/departures"
+    url = f"https://api.sncf.com/v1/coverage/sncf/stop_areas/{station_id}/departures"
     response = requests.get(url, auth=(TOKEN, ""), params={"datetime": time, "count": 5})
     data = response.json()
     for departure in data.get("departures", []):
