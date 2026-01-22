@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 # We load the token from the .env file
 load_dotenv()
-TOKEN = os.getenv("TOKEN")
+TOKEN = os.getenv("TOKEN_SNCF")
 
 def stationByName(gare):
     # The API endpoint and call
